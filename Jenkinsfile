@@ -1,4 +1,7 @@
 pipeline {
+   toold {
+      maven 'Maven'
+   }
    agent any
 
    environment {
