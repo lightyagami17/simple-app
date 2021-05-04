@@ -1,5 +1,5 @@
 pipeline {
-   toold {
+   tools {
       maven 'Maven'
    }
    agent any
