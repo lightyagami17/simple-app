@@ -6,7 +6,7 @@ pipeline {
 
    environment {
        // use your actual issuer URL here and NOT the placeholder {yourOktaDomain}
-       //OKTA_OAUTH2_ISSUER           = 'https://dev-5088901.okta.com/oauth2/default'
+       OKTA_OAUTH2_ISSUER           = 'https://dev-5088901.okta.com/oauth2/default'
        //OKTA_OAUTH2_CLIENT_ID        = credentials('OKTA_OAUTH2_CLIENT_ID')
        //OKTA_OAUTH2_CLIENT_SECRET    = credentials('OKTA_OAUTH2_CLIENT_SECRET')
    }
@@ -15,7 +15,7 @@ pipeline {
       stage('Build') {
          steps {
             // Get some code from a GitHub repository
-            git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+            git 'https://github.com/lightyagami17/simple-app.git'
 
             // Run Maven on a Unix agent.
             sh "mvn -Dmaven.test.failure.ignore=true clean package"
