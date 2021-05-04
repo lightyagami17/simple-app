@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 	@GetMapping("/greeting")
     public String greet(@AuthenticationPrincipal OidcUser user){
-        return "Hello Abhishek Tenneti" + user.getEmail();
+        return "Hello Abhishek Tenneti" ;
     }
 }
